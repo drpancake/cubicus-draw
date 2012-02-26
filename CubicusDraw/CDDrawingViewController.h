@@ -10,9 +10,11 @@
 
 #import "CBHost.h"
 #import "CBAppClient.h"
+#import "CBContextManagerDelegate.h"
 
-@interface CDDrawingViewController : NSViewController
+@interface CDDrawingViewController : NSViewController<CBContextManagerDelegate>
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
+@property (weak) IBOutlet NSView *canvasView;
 
 @end
