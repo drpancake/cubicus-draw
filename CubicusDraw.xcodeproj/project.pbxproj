@@ -27,6 +27,17 @@
 		1A41C73814FA65A7009D5328 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72A14FA65A7009D5328 /* SBJsonTokeniser.m */; };
 		1A41C73914FA65A7009D5328 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72C14FA65A7009D5328 /* SBJsonUTF8Stream.m */; };
 		1A41C73A14FA65A7009D5328 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72E14FA65A7009D5328 /* SBJsonWriter.m */; };
+		1A41C9A714FA71FB009D5328 /* CBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C98F14FA71FB009D5328 /* CBClient.m */; };
+		1A41C9A814FA71FB009D5328 /* CBBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99314FA71FB009D5328 /* CBBox.m */; };
+		1A41C9A914FA71FB009D5328 /* CBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99514FA71FB009D5328 /* CBButton.m */; };
+		1A41C9AA14FA71FB009D5328 /* CBCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99714FA71FB009D5328 /* CBCanvas.m */; };
+		1A41C9AB14FA71FB009D5328 /* CBHorizontalBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99914FA71FB009D5328 /* CBHorizontalBox.m */; };
+		1A41C9AC14FA71FB009D5328 /* CBLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99B14FA71FB009D5328 /* CBLayout.m */; };
+		1A41C9AD14FA71FB009D5328 /* CBLayoutElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99D14FA71FB009D5328 /* CBLayoutElement.m */; };
+		1A41C9AE14FA71FB009D5328 /* CBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A014FA71FB009D5328 /* CBApplication.m */; };
+		1A41C9AF14FA71FB009D5328 /* CBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A214FA71FB009D5328 /* CBContext.m */; };
+		1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A414FA71FB009D5328 /* CBContextState.m */; };
+		1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A614FA71FB009D5328 /* CBHost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +83,29 @@
 		1A41C72C14FA65A7009D5328 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1A41C72D14FA65A7009D5328 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1A41C72E14FA65A7009D5328 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		1A41C98E14FA71FB009D5328 /* CBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBClient.h; sourceTree = "<group>"; };
+		1A41C98F14FA71FB009D5328 /* CBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBClient.m; sourceTree = "<group>"; };
+		1A41C99014FA71FB009D5328 /* CBClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBClientDelegate.h; sourceTree = "<group>"; };
+		1A41C99214FA71FB009D5328 /* CBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBox.h; sourceTree = "<group>"; };
+		1A41C99314FA71FB009D5328 /* CBBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBox.m; sourceTree = "<group>"; };
+		1A41C99414FA71FB009D5328 /* CBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBButton.h; sourceTree = "<group>"; };
+		1A41C99514FA71FB009D5328 /* CBButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBButton.m; sourceTree = "<group>"; };
+		1A41C99614FA71FB009D5328 /* CBCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCanvas.h; sourceTree = "<group>"; };
+		1A41C99714FA71FB009D5328 /* CBCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCanvas.m; sourceTree = "<group>"; };
+		1A41C99814FA71FB009D5328 /* CBHorizontalBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHorizontalBox.h; sourceTree = "<group>"; };
+		1A41C99914FA71FB009D5328 /* CBHorizontalBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHorizontalBox.m; sourceTree = "<group>"; };
+		1A41C99A14FA71FB009D5328 /* CBLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLayout.h; sourceTree = "<group>"; };
+		1A41C99B14FA71FB009D5328 /* CBLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLayout.m; sourceTree = "<group>"; };
+		1A41C99C14FA71FB009D5328 /* CBLayoutElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLayoutElement.h; sourceTree = "<group>"; };
+		1A41C99D14FA71FB009D5328 /* CBLayoutElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLayoutElement.m; sourceTree = "<group>"; };
+		1A41C99F14FA71FB009D5328 /* CBApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBApplication.h; sourceTree = "<group>"; };
+		1A41C9A014FA71FB009D5328 /* CBApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBApplication.m; sourceTree = "<group>"; };
+		1A41C9A114FA71FB009D5328 /* CBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBContext.h; sourceTree = "<group>"; };
+		1A41C9A214FA71FB009D5328 /* CBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBContext.m; sourceTree = "<group>"; };
+		1A41C9A314FA71FB009D5328 /* CBContextState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBContextState.h; sourceTree = "<group>"; };
+		1A41C9A414FA71FB009D5328 /* CBContextState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBContextState.m; sourceTree = "<group>"; };
+		1A41C9A514FA71FB009D5328 /* CBHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHost.h; sourceTree = "<group>"; };
+		1A41C9A614FA71FB009D5328 /* CBHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +140,7 @@
 		1A41C55114FA64A3009D5328 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A41C98D14FA71FB009D5328 /* cubicus-objc-shared */,
 				1A41C71514FA65A7009D5328 /* SBJson */,
 				1A41C57314FA6522009D5328 /* CocoaAsyncSocket */,
 				1A41C55214FA64A3009D5328 /* Cocoa.framework */,
@@ -192,6 +227,53 @@
 			path = Lib/SBJson/Classes;
 			sourceTree = "<group>";
 		};
+		1A41C98D14FA71FB009D5328 /* cubicus-objc-shared */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C98E14FA71FB009D5328 /* CBClient.h */,
+				1A41C98F14FA71FB009D5328 /* CBClient.m */,
+				1A41C99014FA71FB009D5328 /* CBClientDelegate.h */,
+				1A41C99114FA71FB009D5328 /* layout */,
+				1A41C99E14FA71FB009D5328 /* models */,
+			);
+			name = "cubicus-objc-shared";
+			path = "../cubicus-objc-shared";
+			sourceTree = "<group>";
+		};
+		1A41C99114FA71FB009D5328 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C99214FA71FB009D5328 /* CBBox.h */,
+				1A41C99314FA71FB009D5328 /* CBBox.m */,
+				1A41C99414FA71FB009D5328 /* CBButton.h */,
+				1A41C99514FA71FB009D5328 /* CBButton.m */,
+				1A41C99614FA71FB009D5328 /* CBCanvas.h */,
+				1A41C99714FA71FB009D5328 /* CBCanvas.m */,
+				1A41C99814FA71FB009D5328 /* CBHorizontalBox.h */,
+				1A41C99914FA71FB009D5328 /* CBHorizontalBox.m */,
+				1A41C99A14FA71FB009D5328 /* CBLayout.h */,
+				1A41C99B14FA71FB009D5328 /* CBLayout.m */,
+				1A41C99C14FA71FB009D5328 /* CBLayoutElement.h */,
+				1A41C99D14FA71FB009D5328 /* CBLayoutElement.m */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		1A41C99E14FA71FB009D5328 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C99F14FA71FB009D5328 /* CBApplication.h */,
+				1A41C9A014FA71FB009D5328 /* CBApplication.m */,
+				1A41C9A114FA71FB009D5328 /* CBContext.h */,
+				1A41C9A214FA71FB009D5328 /* CBContext.m */,
+				1A41C9A314FA71FB009D5328 /* CBContextState.h */,
+				1A41C9A414FA71FB009D5328 /* CBContextState.m */,
+				1A41C9A514FA71FB009D5328 /* CBHost.h */,
+				1A41C9A614FA71FB009D5328 /* CBHost.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,6 +355,17 @@
 				1A41C73814FA65A7009D5328 /* SBJsonTokeniser.m in Sources */,
 				1A41C73914FA65A7009D5328 /* SBJsonUTF8Stream.m in Sources */,
 				1A41C73A14FA65A7009D5328 /* SBJsonWriter.m in Sources */,
+				1A41C9A714FA71FB009D5328 /* CBClient.m in Sources */,
+				1A41C9A814FA71FB009D5328 /* CBBox.m in Sources */,
+				1A41C9A914FA71FB009D5328 /* CBButton.m in Sources */,
+				1A41C9AA14FA71FB009D5328 /* CBCanvas.m in Sources */,
+				1A41C9AB14FA71FB009D5328 /* CBHorizontalBox.m in Sources */,
+				1A41C9AC14FA71FB009D5328 /* CBLayout.m in Sources */,
+				1A41C9AD14FA71FB009D5328 /* CBLayoutElement.m in Sources */,
+				1A41C9AE14FA71FB009D5328 /* CBApplication.m in Sources */,
+				1A41C9AF14FA71FB009D5328 /* CBContext.m in Sources */,
+				1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */,
+				1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
