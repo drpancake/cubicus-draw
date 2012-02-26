@@ -11,10 +11,12 @@
 @implementation CDAppDelegate
 
 @synthesize window = _window;
+@synthesize drawingViewController = _drawingViewController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    self.drawingViewController = [[CDDrawingViewController alloc] initWithNibName:nil bundle:nil];
+    [self.window setContentView:self.drawingViewController.view];
 }
 
 @end

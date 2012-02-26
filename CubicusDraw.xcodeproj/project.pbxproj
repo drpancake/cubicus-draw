@@ -38,6 +38,10 @@
 		1A41C9AF14FA71FB009D5328 /* CBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A214FA71FB009D5328 /* CBContext.m */; };
 		1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A414FA71FB009D5328 /* CBContextState.m */; };
 		1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A614FA71FB009D5328 /* CBHost.m */; };
+		1A41C9C214FA7522009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9C114FA7522009D5328 /* CBAppClient.m */; };
+		1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9C514FA7574009D5328 /* CBAbstractClient.m */; };
+		1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */; };
+		1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,9 +87,9 @@
 		1A41C72C14FA65A7009D5328 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1A41C72D14FA65A7009D5328 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1A41C72E14FA65A7009D5328 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBDeviceClient.h; sourceTree = "<group>"; };
+		1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDeviceClient.h; sourceTree = "<group>"; };
 		1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDeviceClient.m; sourceTree = "<group>"; };
-		1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBDeviceClientDelegate.h; sourceTree = "<group>"; };
+		1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDeviceClientDelegate.h; sourceTree = "<group>"; };
 		1A41C99214FA71FB009D5328 /* CBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBox.h; sourceTree = "<group>"; };
 		1A41C99314FA71FB009D5328 /* CBBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBox.m; sourceTree = "<group>"; };
 		1A41C99414FA71FB009D5328 /* CBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBButton.h; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 		1A41C9A414FA71FB009D5328 /* CBContextState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBContextState.m; sourceTree = "<group>"; };
 		1A41C9A514FA71FB009D5328 /* CBHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHost.h; sourceTree = "<group>"; };
 		1A41C9A614FA71FB009D5328 /* CBHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHost.m; sourceTree = "<group>"; };
+		1A41C9C014FA7522009D5328 /* CBAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAppClient.h; sourceTree = "<group>"; };
+		1A41C9C114FA7522009D5328 /* CBAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAppClient.m; sourceTree = "<group>"; };
+		1A41C9C314FA753A009D5328 /* CBAppClientDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBAppClientDelegate.h; sourceTree = "<group>"; };
+		1A41C9C414FA7574009D5328 /* CBAbstractClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAbstractClient.h; sourceTree = "<group>"; };
+		1A41C9C514FA7574009D5328 /* CBAbstractClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAbstractClient.m; sourceTree = "<group>"; };
+		1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingViewController.h; sourceTree = "<group>"; };
+		1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingViewController.m; sourceTree = "<group>"; };
+		1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +176,9 @@
 			children = (
 				1A41C56414FA64A4009D5328 /* CDAppDelegate.h */,
 				1A41C56514FA64A4009D5328 /* CDAppDelegate.m */,
+				1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */,
+				1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */,
+				1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */,
 				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
 				1A41C55914FA64A4009D5328 /* Supporting Files */,
 			);
@@ -230,6 +245,11 @@
 		1A41C98D14FA71FB009D5328 /* cubicus-objc-shared */ = {
 			isa = PBXGroup;
 			children = (
+				1A41C9C414FA7574009D5328 /* CBAbstractClient.h */,
+				1A41C9C514FA7574009D5328 /* CBAbstractClient.m */,
+				1A41C9C014FA7522009D5328 /* CBAppClient.h */,
+				1A41C9C114FA7522009D5328 /* CBAppClient.m */,
+				1A41C9C314FA753A009D5328 /* CBAppClientDelegate.h */,
 				1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */,
 				1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */,
 				1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */,
@@ -329,6 +349,7 @@
 				1A41C55D14FA64A4009D5328 /* InfoPlist.strings in Resources */,
 				1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */,
 				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
+				1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +387,9 @@
 				1A41C9AF14FA71FB009D5328 /* CBContext.m in Sources */,
 				1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */,
 				1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */,
+				1A41C9C214FA7522009D5328 /* CBAppClient.m in Sources */,
+				1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */,
+				1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +473,8 @@
 		1A41C56D14FA64A4009D5328 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CubicusDraw/CubicusDraw-Prefix.pch";
 				INFOPLIST_FILE = "CubicusDraw/CubicusDraw-Info.plist";
@@ -460,6 +486,8 @@
 		1A41C56E14FA64A4009D5328 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CubicusDraw/CubicusDraw-Prefix.pch";
 				INFOPLIST_FILE = "CubicusDraw/CubicusDraw-Info.plist";
