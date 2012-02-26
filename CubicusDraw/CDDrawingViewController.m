@@ -22,7 +22,7 @@
     if (self) {
         // Create a client but don't connect yet
         CBHost *host = [[CBHost alloc] initWithAddress:CD_DAEMON_HOST port:[NSNumber numberWithInt:CD_DAEMON_PORT]];
-        client = [[CBAppClient alloc] initWithHost:host];
+        client = [[CBAppClient alloc] initWithHost:host applicationName:CD_APP_NAME];
     }
     
     return self;
@@ -33,13 +33,18 @@
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     
     // Create context manager(s) to wrap views
-    NSString *s = @"{\"id\": 1, \"type\": \"hbox\", \"items\": []}";
-    CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:s]];
+    NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"ratio\": 0.3}";
+    NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
+    NSString *hboxString = [NSString stringWithFormat:
+                            @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@]}",
+                            buttonString, canvasString];
+    
+    CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context];
     [canvasManager wrapView:self.canvasView];
-    [client addContextManager:canvasManager];
+    [client addContextManager:canvasManager defaultContext:YES];
     
     // Connect to daemon
     [client connect];
