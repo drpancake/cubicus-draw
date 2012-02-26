@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A41C55314FA64A3009D5328 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A41C55214FA64A3009D5328 /* Cocoa.framework */; };
+		1A41C55D14FA64A4009D5328 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A41C55B14FA64A4009D5328 /* InfoPlist.strings */; };
+		1A41C55F14FA64A4009D5328 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C55E14FA64A4009D5328 /* main.m */; };
+		1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1A41C56114FA64A4009D5328 /* Credits.rtf */; };
+		1A41C56614FA64A4009D5328 /* CDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C56514FA64A4009D5328 /* CDAppDelegate.m */; };
+		1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41C56714FA64A4009D5328 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A41C54E14FA64A3009D5328 /* CubicusDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CubicusDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41C55214FA64A3009D5328 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1A41C55514FA64A3009D5328 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1A41C55614FA64A3009D5328 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1A41C55714FA64A3009D5328 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A41C55A14FA64A4009D5328 /* CubicusDraw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubicusDraw-Info.plist"; sourceTree = "<group>"; };
+		1A41C55C14FA64A4009D5328 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A41C55E14FA64A4009D5328 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A41C56014FA64A4009D5328 /* CubicusDraw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CubicusDraw-Prefix.pch"; sourceTree = "<group>"; };
+		1A41C56214FA64A4009D5328 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		1A41C56414FA64A4009D5328 /* CDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDAppDelegate.h; sourceTree = "<group>"; };
+		1A41C56514FA64A4009D5328 /* CDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDAppDelegate.m; sourceTree = "<group>"; };
+		1A41C56814FA64A4009D5328 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A41C54B14FA64A3009D5328 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A41C55314FA64A3009D5328 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A41C54314FA64A3009D5328 = {
+			isa = PBXGroup;
+			children = (
+				1A41C55814FA64A3009D5328 /* CubicusDraw */,
+				1A41C55114FA64A3009D5328 /* Frameworks */,
+				1A41C54F14FA64A3009D5328 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A41C54F14FA64A3009D5328 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C54E14FA64A3009D5328 /* CubicusDraw.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A41C55114FA64A3009D5328 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C55214FA64A3009D5328 /* Cocoa.framework */,
+				1A41C55414FA64A3009D5328 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A41C55414FA64A3009D5328 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C55514FA64A3009D5328 /* AppKit.framework */,
+				1A41C55614FA64A3009D5328 /* CoreData.framework */,
+				1A41C55714FA64A3009D5328 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1A41C55814FA64A3009D5328 /* CubicusDraw */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C56414FA64A4009D5328 /* CDAppDelegate.h */,
+				1A41C56514FA64A4009D5328 /* CDAppDelegate.m */,
+				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
+				1A41C55914FA64A4009D5328 /* Supporting Files */,
+			);
+			path = CubicusDraw;
+			sourceTree = "<group>";
+		};
+		1A41C55914FA64A4009D5328 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A41C55A14FA64A4009D5328 /* CubicusDraw-Info.plist */,
+				1A41C55B14FA64A4009D5328 /* InfoPlist.strings */,
+				1A41C55E14FA64A4009D5328 /* main.m */,
+				1A41C56014FA64A4009D5328 /* CubicusDraw-Prefix.pch */,
+				1A41C56114FA64A4009D5328 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A41C54D14FA64A3009D5328 /* CubicusDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A41C56C14FA64A4009D5328 /* Build configuration list for PBXNativeTarget "CubicusDraw" */;
+			buildPhases = (
+				1A41C54A14FA64A3009D5328 /* Sources */,
+				1A41C54B14FA64A3009D5328 /* Frameworks */,
+				1A41C54C14FA64A3009D5328 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CubicusDraw;
+			productName = CubicusDraw;
+			productReference = 1A41C54E14FA64A3009D5328 /* CubicusDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A41C54514FA64A3009D5328 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CD;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 1A41C54814FA64A3009D5328 /* Build configuration list for PBXProject "CubicusDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A41C54314FA64A3009D5328;
+			productRefGroup = 1A41C54F14FA64A3009D5328 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A41C54D14FA64A3009D5328 /* CubicusDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A41C54C14FA64A3009D5328 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A41C55D14FA64A4009D5328 /* InfoPlist.strings in Resources */,
+				1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */,
+				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A41C54A14FA64A3009D5328 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A41C55F14FA64A4009D5328 /* main.m in Sources */,
+				1A41C56614FA64A4009D5328 /* CDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A41C55B14FA64A4009D5328 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A41C55C14FA64A4009D5328 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A41C56114FA64A4009D5328 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A41C56214FA64A4009D5328 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		1A41C56714FA64A4009D5328 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A41C56814FA64A4009D5328 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A41C56A14FA64A4009D5328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1A41C56B14FA64A4009D5328 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1A41C56D14FA64A4009D5328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubicusDraw/CubicusDraw-Prefix.pch";
+				INFOPLIST_FILE = "CubicusDraw/CubicusDraw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A41C56E14FA64A4009D5328 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CubicusDraw/CubicusDraw-Prefix.pch";
+				INFOPLIST_FILE = "CubicusDraw/CubicusDraw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A41C54814FA64A3009D5328 /* Build configuration list for PBXProject "CubicusDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A41C56A14FA64A4009D5328 /* Debug */,
+				1A41C56B14FA64A4009D5328 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A41C56C14FA64A4009D5328 /* Build configuration list for PBXNativeTarget "CubicusDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A41C56D14FA64A4009D5328 /* Debug */,
+				1A41C56E14FA64A4009D5328 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A41C54514FA64A3009D5328 /* Project object */;
+}
