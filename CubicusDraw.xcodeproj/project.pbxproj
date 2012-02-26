@@ -27,7 +27,7 @@
 		1A41C73814FA65A7009D5328 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72A14FA65A7009D5328 /* SBJsonTokeniser.m */; };
 		1A41C73914FA65A7009D5328 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72C14FA65A7009D5328 /* SBJsonUTF8Stream.m */; };
 		1A41C73A14FA65A7009D5328 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C72E14FA65A7009D5328 /* SBJsonWriter.m */; };
-		1A41C9A714FA71FB009D5328 /* CBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C98F14FA71FB009D5328 /* CBClient.m */; };
+		1A41C9A714FA71FB009D5328 /* CBDeviceClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */; };
 		1A41C9A814FA71FB009D5328 /* CBBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99314FA71FB009D5328 /* CBBox.m */; };
 		1A41C9A914FA71FB009D5328 /* CBButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99514FA71FB009D5328 /* CBButton.m */; };
 		1A41C9AA14FA71FB009D5328 /* CBCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C99714FA71FB009D5328 /* CBCanvas.m */; };
@@ -83,9 +83,9 @@
 		1A41C72C14FA65A7009D5328 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
 		1A41C72D14FA65A7009D5328 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		1A41C72E14FA65A7009D5328 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
-		1A41C98E14FA71FB009D5328 /* CBClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBClient.h; sourceTree = "<group>"; };
-		1A41C98F14FA71FB009D5328 /* CBClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBClient.m; sourceTree = "<group>"; };
-		1A41C99014FA71FB009D5328 /* CBClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBClientDelegate.h; sourceTree = "<group>"; };
+		1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBDeviceClient.h; sourceTree = "<group>"; };
+		1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDeviceClient.m; sourceTree = "<group>"; };
+		1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CBDeviceClientDelegate.h; sourceTree = "<group>"; };
 		1A41C99214FA71FB009D5328 /* CBBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBox.h; sourceTree = "<group>"; };
 		1A41C99314FA71FB009D5328 /* CBBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBox.m; sourceTree = "<group>"; };
 		1A41C99414FA71FB009D5328 /* CBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBButton.h; sourceTree = "<group>"; };
@@ -230,9 +230,9 @@
 		1A41C98D14FA71FB009D5328 /* cubicus-objc-shared */ = {
 			isa = PBXGroup;
 			children = (
-				1A41C98E14FA71FB009D5328 /* CBClient.h */,
-				1A41C98F14FA71FB009D5328 /* CBClient.m */,
-				1A41C99014FA71FB009D5328 /* CBClientDelegate.h */,
+				1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */,
+				1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */,
+				1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */,
 				1A41C99114FA71FB009D5328 /* layout */,
 				1A41C99E14FA71FB009D5328 /* models */,
 			);
@@ -355,7 +355,7 @@
 				1A41C73814FA65A7009D5328 /* SBJsonTokeniser.m in Sources */,
 				1A41C73914FA65A7009D5328 /* SBJsonUTF8Stream.m in Sources */,
 				1A41C73A14FA65A7009D5328 /* SBJsonWriter.m in Sources */,
-				1A41C9A714FA71FB009D5328 /* CBClient.m in Sources */,
+				1A41C9A714FA71FB009D5328 /* CBDeviceClient.m in Sources */,
 				1A41C9A814FA71FB009D5328 /* CBBox.m in Sources */,
 				1A41C9A914FA71FB009D5328 /* CBButton.m in Sources */,
 				1A41C9AA14FA71FB009D5328 /* CBCanvas.m in Sources */,
