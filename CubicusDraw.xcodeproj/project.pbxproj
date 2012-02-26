@@ -42,6 +42,7 @@
 		1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9C514FA7574009D5328 /* CBAbstractClient.m */; };
 		1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */; };
 		1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */; };
+		1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0914FA9C71009D5328 /* CubicusDraw.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,8 @@
 		1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingViewController.h; sourceTree = "<group>"; };
 		1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingViewController.m; sourceTree = "<group>"; };
 		1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingViewController.xib; sourceTree = "<group>"; };
+		1A41CA0814FA9C71009D5328 /* CubicusDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicusDraw.h; sourceTree = "<group>"; };
+		1A41CA0914FA9C71009D5328 /* CubicusDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicusDraw.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 		1A41C55814FA64A3009D5328 /* CubicusDraw */ = {
 			isa = PBXGroup;
 			children = (
+				1A41CA0814FA9C71009D5328 /* CubicusDraw.h */,
+				1A41CA0914FA9C71009D5328 /* CubicusDraw.m */,
 				1A41C56414FA64A4009D5328 /* CDAppDelegate.h */,
 				1A41C56514FA64A4009D5328 /* CDAppDelegate.m */,
 				1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */,
@@ -390,6 +395,7 @@
 				1A41C9C214FA7522009D5328 /* CBAppClient.m in Sources */,
 				1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */,
 				1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */,
+				1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
