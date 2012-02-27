@@ -44,6 +44,7 @@
 		1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0914FA9C71009D5328 /* CubicusDraw.m */; };
 		1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1114FA9EE6009D5328 /* CBContextManager.m */; };
 		1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1514FAA4EC009D5328 /* CBAppClient.m */; };
+		1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,8 @@
 		1A41CA1414FAA4EC009D5328 /* CBAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClient.h; path = mac/CBAppClient.h; sourceTree = "<group>"; };
 		1A41CA1514FAA4EC009D5328 /* CBAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAppClient.m; path = mac/CBAppClient.m; sourceTree = "<group>"; };
 		1A41CA1714FAC65A009D5328 /* CBAppClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClientDelegate.h; path = mac/CBAppClientDelegate.h; sourceTree = "<group>"; };
+		1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextWrapView.h; path = mac/CBContextWrapView.h; sourceTree = "<group>"; };
+		1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBContextWrapView.m; path = mac/CBContextWrapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -310,6 +313,8 @@
 				1A41CA1014FA9EE6009D5328 /* CBContextManager.h */,
 				1A41CA1114FA9EE6009D5328 /* CBContextManager.m */,
 				1A41CA1314FA9F57009D5328 /* CBContextManagerDelegate.h */,
+				1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */,
+				1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */,
 			);
 			name = mac;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */,
 				1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */,
 				1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */,
+				1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

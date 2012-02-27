@@ -44,7 +44,7 @@
     CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
-    CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context];
+    CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
     [canvasManager wrapView:self.canvasView];
     [client addContextManager:canvasManager defaultContext:YES];
     
@@ -58,7 +58,7 @@
     CBLayout *toolsLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
     
-    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context];
+    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
     [toolsManager wrapView:self.toolsView];
     [client addContextManager:toolsManager];
     
