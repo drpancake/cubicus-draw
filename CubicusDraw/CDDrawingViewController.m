@@ -15,6 +15,7 @@
 
 @synthesize client;
 @synthesize canvasView;
+@synthesize toolsView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,7 +33,8 @@
 {
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     
-    // Create context manager(s) to wrap views
+    // Canvas context manager
+    
     NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"ratio\": 0.3}";
     NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
     NSString *hboxString = [NSString stringWithFormat:
@@ -45,6 +47,20 @@
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context];
     [canvasManager wrapView:self.canvasView];
     [client addContextManager:canvasManager defaultContext:YES];
+    
+    // Tools context manager
+    NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"ratio\": 0.33}";
+    NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"ratio\": 0.33}";
+    NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"ratio\": 0.33}";
+    hboxString = [NSString stringWithFormat:
+                  @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@, %@]}",
+                  button1, button2, button3];
+    CBLayout *toolsLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
+    context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
+    
+    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context];
+    [toolsManager wrapView:self.toolsView];
+    [client addContextManager:toolsManager];
     
     // Connect to daemon
     [client connect];

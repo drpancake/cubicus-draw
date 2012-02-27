@@ -16,5 +16,6 @@
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
 @property (weak) IBOutlet NSView *canvasView;
+@property (weak) IBOutlet NSView *toolsView;
 
 @end
