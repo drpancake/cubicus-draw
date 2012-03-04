@@ -8,7 +8,6 @@
 
 #import "CDDrawingViewController.h"
 #import "CubicusDraw.h"
-#import "CBContextManager.h"
 #import "SBJson.h"
 
 @implementation CDDrawingViewController

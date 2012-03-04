@@ -128,6 +128,7 @@
 		1A41CA1714FAC65A009D5328 /* CBAppClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClientDelegate.h; path = mac/CBAppClientDelegate.h; sourceTree = "<group>"; };
 		1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextWrapView.h; path = mac/CBContextWrapView.h; sourceTree = "<group>"; };
 		1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBContextWrapView.m; path = mac/CBContextWrapView.m; sourceTree = "<group>"; };
+		1AD51C921503AB6F009702EE /* CBShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShared.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +264,7 @@
 				1A41C98E14FA71FB009D5328 /* CBDeviceClient.h */,
 				1A41C98F14FA71FB009D5328 /* CBDeviceClient.m */,
 				1A41C99014FA71FB009D5328 /* CBDeviceClientDelegate.h */,
+				1AD51C921503AB6F009702EE /* CBShared.h */,
 				1A41C99114FA71FB009D5328 /* layout */,
 				1A41C99E14FA71FB009D5328 /* models */,
 			);

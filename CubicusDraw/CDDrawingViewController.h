@@ -8,9 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "CBHost.h"
-#import "CBAppClient.h"
-#import "CBContextManagerDelegate.h"
+#import "CBShared.h"
 
 @interface CDDrawingViewController : NSViewController<CBContextManagerDelegate>
 
