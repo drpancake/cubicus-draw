@@ -45,6 +45,9 @@
 		1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1114FA9EE6009D5328 /* CBContextManager.m */; };
 		1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1514FAA4EC009D5328 /* CBAppClient.m */; };
 		1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */; };
+		1AD51C9D15055AA8009702EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD51C9C15055AA8009702EE /* WebKit.framework */; };
+		1AFB07AB15055E4800B3BD22 /* CDCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB07A915055E4800B3BD22 /* CDCanvasViewController.m */; };
+		1AFB07AC15055E4800B3BD22 /* CDCanvasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AFB07AA15055E4800B3BD22 /* CDCanvasViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +132,10 @@
 		1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextWrapView.h; path = mac/CBContextWrapView.h; sourceTree = "<group>"; };
 		1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBContextWrapView.m; path = mac/CBContextWrapView.m; sourceTree = "<group>"; };
 		1AD51C921503AB6F009702EE /* CBShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShared.h; sourceTree = "<group>"; };
+		1AD51C9C15055AA8009702EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1AFB07A815055E4800B3BD22 /* CDCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDCanvasViewController.h; sourceTree = "<group>"; };
+		1AFB07A915055E4800B3BD22 /* CDCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDCanvasViewController.m; sourceTree = "<group>"; };
+		1AFB07AA15055E4800B3BD22 /* CDCanvasViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDCanvasViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AD51C9D15055AA8009702EE /* WebKit.framework in Frameworks */,
 				1A41C55314FA64A3009D5328 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +183,7 @@
 		1A41C55414FA64A3009D5328 /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AD51C9C15055AA8009702EE /* WebKit.framework */,
 				1A41C55514FA64A3009D5328 /* AppKit.framework */,
 				1A41C55614FA64A3009D5328 /* CoreData.framework */,
 				1A41C55714FA64A3009D5328 /* Foundation.framework */,
@@ -194,6 +203,9 @@
 				1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */,
 				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
 				1A41C55914FA64A4009D5328 /* Supporting Files */,
+				1AFB07A815055E4800B3BD22 /* CDCanvasViewController.h */,
+				1AFB07A915055E4800B3BD22 /* CDCanvasViewController.m */,
+				1AFB07AA15055E4800B3BD22 /* CDCanvasViewController.xib */,
 			);
 			path = CubicusDraw;
 			sourceTree = "<group>";
@@ -377,6 +389,7 @@
 				1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */,
 				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
 				1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */,
+				1AFB07AC15055E4800B3BD22 /* CDCanvasViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +433,7 @@
 				1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */,
 				1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */,
 				1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */,
+				1AFB07AB15055E4800B3BD22 /* CDCanvasViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
