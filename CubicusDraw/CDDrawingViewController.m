@@ -34,7 +34,7 @@
     
     // Canvas context manager
     
-    NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"ratio\": 0.3}";
+    NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button\", \"ratio\": 0.3}";
     NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
     NSString *hboxString = [NSString stringWithFormat:
                             @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@]}",
@@ -48,9 +48,9 @@
     [client addContextManager:canvasManager defaultContext:YES];
     
     // Tools context manager
-    NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"ratio\": 0.33}";
-    NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"ratio\": 0.33}";
-    NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"ratio\": 0.33}";
+    NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button 1\", \"ratio\": 0.33}";
+    NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"label\": \"Button 2\", \"ratio\": 0.33}";
+    NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"label\": \"Button 3\", \"ratio\": 0.33}";
     hboxString = [NSString stringWithFormat:
                   @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@, %@]}",
                   button1, button2, button3];
