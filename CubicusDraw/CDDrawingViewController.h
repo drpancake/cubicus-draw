@@ -9,11 +9,13 @@
 #import <Cocoa/Cocoa.h>
 
 #import "CBShared.h"
+#import "JPCanvasViewController.h"
 
 @interface CDDrawingViewController : NSViewController<CBContextManagerDelegate>
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
 @property (weak) IBOutlet NSView *canvasView;
 @property (weak) IBOutlet NSView *toolsView;
+@property (nonatomic, strong, readonly) JPCanvasViewController *canvasViewController;
 
 @end

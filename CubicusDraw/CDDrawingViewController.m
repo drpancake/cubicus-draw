@@ -15,6 +15,7 @@
 @synthesize client;
 @synthesize canvasView;
 @synthesize toolsView;
+@synthesize canvasViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,14 @@
 
 - (void)awakeFromNib
 {
+    // Create canvas controller and use canvasView as its container
+    canvasViewController = [[JPCanvasViewController alloc] init];
+    NSView *v = canvasViewController.view;
+    [self.canvasView addSubview:v];
+    v.frame = self.canvasView.bounds;
+    v.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
+    
+    
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     
     // Canvas context manager
@@ -44,7 +53,7 @@
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-    [canvasManager wrapView:self.canvasView];
+//    [canvasManager wrapView:self.canvasView];
     [client addContextManager:canvasManager defaultContext:YES];
     
     // Tools context manager
