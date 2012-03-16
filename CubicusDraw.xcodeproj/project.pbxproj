@@ -136,6 +136,8 @@
 		1AD51C9C15055AA8009702EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1ADA214215127B6300A8825C /* CBEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEvent.h; sourceTree = "<group>"; };
 		1ADA214315127B6300A8825C /* CBEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEvent.m; sourceTree = "<group>"; };
+		1ADA214C1513550C00A8825C /* CBEventReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEventReceiver.h; sourceTree = "<group>"; };
+		1ADA214E1513551400A8825C /* CBSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSerializable.h; sourceTree = "<group>"; };
 		1AFA224B150E382B00436493 /* canvas.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = canvas.html; sourceTree = "<group>"; };
 		1AFB07B1150571AD00B3BD22 /* JPCanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPCanvasViewController.h; sourceTree = "<group>"; };
 		1AFB07B2150571AD00B3BD22 /* JPCanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPCanvasViewController.m; sourceTree = "<group>"; };
@@ -307,6 +309,8 @@
 		1A41C99E14FA71FB009D5328 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				1ADA214E1513551400A8825C /* CBSerializable.h */,
+				1ADA214C1513550C00A8825C /* CBEventReceiver.h */,
 				1ADA214215127B6300A8825C /* CBEvent.h */,
 				1ADA214315127B6300A8825C /* CBEvent.m */,
 				1A41C99F14FA71FB009D5328 /* CBApplication.h */,
