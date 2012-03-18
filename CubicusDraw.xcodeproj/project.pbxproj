@@ -45,9 +45,9 @@
 		1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1114FA9EE6009D5328 /* CBContextManager.m */; };
 		1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1514FAA4EC009D5328 /* CBAppClient.m */; };
 		1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */; };
+		1AAC4242151556DE00402343 /* NativeBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA21501513EA9200A8825C /* NativeBridge.js */; };
 		1AD51C9D15055AA8009702EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD51C9C15055AA8009702EE /* WebKit.framework */; };
 		1ADA214415127B6300A8825C /* CBEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA214315127B6300A8825C /* CBEvent.m */; };
-		1ADA21511513EA9200A8825C /* NativeBridge.js in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA21501513EA9200A8825C /* NativeBridge.js */; };
 		1AFA224C150E382B00436493 /* canvas.html in Resources */ = {isa = PBXBuildFile; fileRef = 1AFA224B150E382B00436493 /* canvas.html */; };
 		1AFB07B3150571AD00B3BD22 /* JPCanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB07B2150571AD00B3BD22 /* JPCanvasViewController.m */; };
 /* End PBXBuildFile section */
@@ -408,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AAC4242151556DE00402343 /* NativeBridge.js in Resources */,
 				1A41C55D14FA64A4009D5328 /* InfoPlist.strings in Resources */,
 				1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */,
 				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
@@ -458,7 +459,6 @@
 				1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */,
 				1AFB07B3150571AD00B3BD22 /* JPCanvasViewController.m in Sources */,
 				1ADA214415127B6300A8825C /* CBEvent.m in Sources */,
-				1ADA21511513EA9200A8825C /* NativeBridge.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
