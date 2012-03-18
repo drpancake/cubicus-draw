@@ -33,6 +33,7 @@
 {
     // Create canvas controller and use canvasView as its container
     canvasViewController = [[JPCanvasViewController alloc] init];
+    canvasViewController.delegate = self;
     NSView *v = canvasViewController.view;
     [self.canvasView addSubview:v];
     v.frame = self.canvasView.bounds;
@@ -72,6 +73,16 @@
     
     // Connect to daemon
     [client connect];
+}
+
+#pragma mark -
+#pragma mark JPCanvasViewControllerDelegate
+
+- (void)canvas:(JPCanvasViewController *)canvas didDrawPoints:(NSArray *)points
+{
+    NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:points, @"points", nil];
+    CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
+    [client sendEvent:event];
 }
 
 @end
