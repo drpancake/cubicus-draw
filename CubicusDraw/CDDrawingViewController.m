@@ -80,8 +80,10 @@
 
 - (void)canvas:(JPCanvasViewController *)canvas didDrawPoints:(NSArray *)points
 {
+    // Points hard-coded for now
     NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:points, @"points", nil];
     CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
+    event.contextID = 1;
     [client sendEvent:event];
 }
 
