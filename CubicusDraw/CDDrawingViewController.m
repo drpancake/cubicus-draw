@@ -24,6 +24,7 @@
         // Create a client but don't connect yet
         CBHost *host = [[CBHost alloc] initWithAddress:CD_DAEMON_HOST port:[NSNumber numberWithInt:CD_DAEMON_PORT]];
         client = [[CBAppClient alloc] initWithHost:host applicationName:CD_APP_NAME];
+        client.delegate = self;
     }
     
     return self;
@@ -73,6 +74,19 @@
     
     // Connect to daemon
     [client connect];
+}
+
+#pragma mark -
+#pragma mark CBAppClientDelegate
+
+- (void)client:(CBAppClient *)client didReceiveEvent:(CBEvent *)event
+{
+//    daemon sending wrong values
+    NSLog(@"got event: %lu %lu", event.contextID, event.elementID);
+    if (event.contextID == 1 && event.elementID == 3) {
+        NSArray *points = [event.content objectForKey:@"points"];
+        [self.canvasViewController drawPoints:points];
+    }
 }
 
 #pragma mark -
