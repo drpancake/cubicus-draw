@@ -13,9 +13,8 @@
 @implementation CDDrawingViewController
 
 @synthesize client;
-@synthesize canvasView;
-@synthesize toolsView;
 @synthesize canvasViewController;
+@synthesize toolsViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,16 +31,17 @@
 
 - (void)awakeFromNib
 {
-    // Create canvas controller and use canvasView as its container
+    // Create canvas controller and use the view that this controller
+    // owns (i.e. self.view) as its view's container
     canvasViewController = [[JPCanvasViewController alloc] init];
     canvasViewController.delegate = self;
     NSView *v = canvasViewController.view;
-    [self.canvasView addSubview:v];
-    v.frame = self.canvasView.bounds;
+    [self.view addSubview:v];
+    v.frame = self.view.bounds;
     v.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
     
-    
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    // Create and display tools panel
+    toolsViewController = [[CDToolsViewController alloc] initWithNibName:@"CDToolsViewController" bundle:nil];
     
     // Canvas context manager
     
@@ -51,14 +51,16 @@
                             @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@]}",
                             buttonString, canvasString];
     
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
     CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-//    [canvasManager wrapView:self.canvasView];
+//    [canvasManager wrapView:self.view];
     [client addContextManager:canvasManager defaultContext:YES];
     
     // Tools context manager
+    
     NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button 1\", \"ratio\": 0.33}";
     NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"label\": \"Button 2\", \"ratio\": 0.33}";
     NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"label\": \"Button 3\", \"ratio\": 0.33}";
@@ -69,7 +71,7 @@
     context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
     
     CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-    [toolsManager wrapView:self.toolsView];
+//    [toolsManager wrapView:self.toolsViewController.view];
     [client addContextManager:toolsManager];
     
     // Connect to daemon

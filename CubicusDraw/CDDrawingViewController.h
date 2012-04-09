@@ -10,12 +10,19 @@
 
 #import "CBShared.h"
 #import "JPCanvasViewController.h"
+#import "CDToolsViewController.h"
+
+/*
+  Creates/owns a JPCanvasViewController and displays its view as a
+  subview of the main NIB view.
+ 
+  Creates/owns a CDToolsViewController.
+ */
 
 @interface CDDrawingViewController : NSViewController <CBContextManagerDelegate, JPCanvasViewControllerDelegate, CBAppClientDelegate>
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
-@property (weak) IBOutlet NSView *canvasView;
-@property (weak) IBOutlet NSView *toolsView;
 @property (nonatomic, strong, readonly) JPCanvasViewController *canvasViewController;
+@property (nonatomic, strong, readonly) CDToolsViewController *toolsViewController;
 
 @end
