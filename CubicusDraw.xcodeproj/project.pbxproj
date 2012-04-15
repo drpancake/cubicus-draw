@@ -39,14 +39,12 @@
 		1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A414FA71FB009D5328 /* CBContextState.m */; };
 		1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9A614FA71FB009D5328 /* CBHost.m */; };
 		1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41C9C514FA7574009D5328 /* CBAbstractClient.m */; };
-		1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */; };
-		1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */; };
 		1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA0914FA9C71009D5328 /* CubicusDraw.m */; };
 		1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1114FA9EE6009D5328 /* CBContextManager.m */; };
 		1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1514FAA4EC009D5328 /* CBAppClient.m */; };
+		1A42C751153B4F1000F3F6F2 /* CDDrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */; };
+		1A42C752153B4F1000F3F6F2 /* CDDrawingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */; };
 		1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */; };
-		1A87FFC11533068D00889BBD /* CDToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A87FFBF1533068D00889BBD /* CDToolsViewController.m */; };
-		1A87FFC5153309B300889BBD /* CDToolsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A87FFC4153309B300889BBD /* CDToolsViewController.xib */; };
 		1AAC4242151556DE00402343 /* NativeBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA21501513EA9200A8825C /* NativeBridge.js */; };
 		1AD51C9D15055AA8009702EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD51C9C15055AA8009702EE /* WebKit.framework */; };
 		1ADA214415127B6300A8825C /* CBEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA214315127B6300A8825C /* CBEvent.m */; };
@@ -122,9 +120,6 @@
 		1A41C9A614FA71FB009D5328 /* CBHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHost.m; sourceTree = "<group>"; };
 		1A41C9C414FA7574009D5328 /* CBAbstractClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAbstractClient.h; sourceTree = "<group>"; };
 		1A41C9C514FA7574009D5328 /* CBAbstractClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAbstractClient.m; sourceTree = "<group>"; };
-		1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingViewController.h; sourceTree = "<group>"; };
-		1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingViewController.m; sourceTree = "<group>"; };
-		1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingViewController.xib; sourceTree = "<group>"; };
 		1A41CA0814FA9C71009D5328 /* CubicusDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubicusDraw.h; sourceTree = "<group>"; };
 		1A41CA0914FA9C71009D5328 /* CubicusDraw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubicusDraw.m; sourceTree = "<group>"; };
 		1A41CA1014FA9EE6009D5328 /* CBContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextManager.h; path = mac/CBContextManager.h; sourceTree = "<group>"; };
@@ -133,11 +128,11 @@
 		1A41CA1414FAA4EC009D5328 /* CBAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClient.h; path = mac/CBAppClient.h; sourceTree = "<group>"; };
 		1A41CA1514FAA4EC009D5328 /* CBAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAppClient.m; path = mac/CBAppClient.m; sourceTree = "<group>"; };
 		1A41CA1714FAC65A009D5328 /* CBAppClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClientDelegate.h; path = mac/CBAppClientDelegate.h; sourceTree = "<group>"; };
+		1A42C74E153B4F1000F3F6F2 /* CDDrawingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingController.h; sourceTree = "<group>"; };
+		1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingController.m; sourceTree = "<group>"; };
+		1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingController.xib; sourceTree = "<group>"; };
 		1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextWrapView.h; path = mac/CBContextWrapView.h; sourceTree = "<group>"; };
 		1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBContextWrapView.m; path = mac/CBContextWrapView.m; sourceTree = "<group>"; };
-		1A87FFBE1533068D00889BBD /* CDToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDToolsViewController.h; sourceTree = "<group>"; };
-		1A87FFBF1533068D00889BBD /* CDToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDToolsViewController.m; sourceTree = "<group>"; };
-		1A87FFC4153309B300889BBD /* CDToolsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDToolsViewController.xib; sourceTree = "<group>"; };
 		1AD51C921503AB6F009702EE /* CBShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShared.h; sourceTree = "<group>"; };
 		1AD51C9C15055AA8009702EE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		1ADA214215127B6300A8825C /* CBEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEvent.h; sourceTree = "<group>"; };
@@ -212,12 +207,9 @@
 				1A41CA0914FA9C71009D5328 /* CubicusDraw.m */,
 				1A41C56414FA64A4009D5328 /* CDAppDelegate.h */,
 				1A41C56514FA64A4009D5328 /* CDAppDelegate.m */,
-				1A41C9FF14FA990C009D5328 /* CDDrawingViewController.h */,
-				1A41CA0014FA990C009D5328 /* CDDrawingViewController.m */,
-				1A41CA0114FA990C009D5328 /* CDDrawingViewController.xib */,
-				1A87FFBE1533068D00889BBD /* CDToolsViewController.h */,
-				1A87FFBF1533068D00889BBD /* CDToolsViewController.m */,
-				1A87FFC4153309B300889BBD /* CDToolsViewController.xib */,
+				1A42C74E153B4F1000F3F6F2 /* CDDrawingController.h */,
+				1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */,
+				1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */,
 				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
 				1A41C55914FA64A4009D5328 /* Supporting Files */,
 			);
@@ -420,9 +412,8 @@
 				1A41C55D14FA64A4009D5328 /* InfoPlist.strings in Resources */,
 				1A41C56314FA64A4009D5328 /* Credits.rtf in Resources */,
 				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
-				1A41CA0314FA990C009D5328 /* CDDrawingViewController.xib in Resources */,
 				1AFA224C150E382B00436493 /* canvas.html in Resources */,
-				1A87FFC5153309B300889BBD /* CDToolsViewController.xib in Resources */,
+				1A42C752153B4F1000F3F6F2 /* CDDrawingController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,14 +452,13 @@
 				1A41C9B014FA71FB009D5328 /* CBContextState.m in Sources */,
 				1A41C9B114FA71FB009D5328 /* CBHost.m in Sources */,
 				1A41C9C614FA7574009D5328 /* CBAbstractClient.m in Sources */,
-				1A41CA0214FA990C009D5328 /* CDDrawingViewController.m in Sources */,
 				1A41CA0A14FA9C71009D5328 /* CubicusDraw.m in Sources */,
 				1A41CA1214FA9EE6009D5328 /* CBContextManager.m in Sources */,
 				1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */,
 				1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */,
 				1AFB07B3150571AD00B3BD22 /* JPCanvasViewController.m in Sources */,
 				1ADA214415127B6300A8825C /* CBEvent.m in Sources */,
-				1A87FFC11533068D00889BBD /* CDToolsViewController.m in Sources */,
+				1A42C751153B4F1000F3F6F2 /* CDDrawingController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

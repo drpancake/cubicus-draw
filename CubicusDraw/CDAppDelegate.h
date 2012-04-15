@@ -8,11 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "CDDrawingViewController.h"
+#import "CDDrawingController.h"
 
 @interface CDAppDelegate : NSObject <NSApplicationDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
-@property (nonatomic, strong) CDDrawingViewController *drawingViewController;
+@property (nonatomic, strong) CDDrawingController *drawingController;
 
 @end

@@ -10,13 +10,14 @@
 
 @implementation CDAppDelegate
 
-@synthesize window = _window;
-@synthesize drawingViewController = _drawingViewController;
+@synthesize drawingController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    self.drawingViewController = [[CDDrawingViewController alloc] initWithNibName:nil bundle:nil];
-    [self.window setContentView:self.drawingViewController.view];
+    // Usually MainMenu NIB does this bit magically
+    self.drawingController = [[CDDrawingController alloc] initWithWindowNibName:@"CDDrawingController"];
+    [self.drawingController showWindow:nil];
+    
 }
 
 @end

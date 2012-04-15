@@ -1,24 +1,22 @@
 //
-//  CDDrawingViewController.m
+//  CDDrawingController.m
 //  CubicusDraw
 //
-//  Created by James Potter on 26/02/2012.
+//  Created by James Potter on 15/04/2012.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CDDrawingViewController.h"
+#import "CDDrawingController.h"
 #import "CubicusDraw.h"
-#import "SBJson.h"
 
-@implementation CDDrawingViewController
+@implementation CDDrawingController
 
 @synthesize client;
 @synthesize canvasViewController;
-@synthesize toolsViewController;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithWindow:(NSWindow *)window
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithWindow:window];
     if (self) {
         // Create a client but don't connect yet
         CBHost *host = [[CBHost alloc] initWithAddress:CD_DAEMON_HOST port:[NSNumber numberWithInt:CD_DAEMON_PORT]];
@@ -29,22 +27,19 @@
     return self;
 }
 
-- (void)awakeFromNib
+- (void)windowDidLoad
 {
-    // Create canvas controller and use the view that this controller
-    // owns (i.e. self.view) as its view's container
+    [super windowDidLoad];
+    
+    // Create canvas and use it as our window's view
     canvasViewController = [[JPCanvasViewController alloc] init];
-    canvasViewController.delegate = self;
-    NSView *v = canvasViewController.view;
-    [self.view addSubview:v];
-    v.frame = self.view.bounds;
-    v.autoresizingMask = NSViewWidthSizable|NSViewHeightSizable;
-    
-    // Create and display tools panel
-    toolsViewController = [[CDToolsViewController alloc] initWithNibName:@"CDToolsViewController" bundle:nil];
-    
-    // Canvas context manager
-    
+    [self.window setContentView:canvasViewController.view];
+
+    [self loadCubicusContexts];
+}
+
+- (void)loadCubicusContexts
+{
     NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button\", \"ratio\": 0.3}";
     NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
     NSString *hboxString = [NSString stringWithFormat:
@@ -56,7 +51,7 @@
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-//    [canvasManager wrapView:self.view];
+    //    [canvasManager wrapView:self.view];
     [client addContextManager:canvasManager defaultContext:YES];
     
     // Tools context manager
@@ -71,7 +66,7 @@
     context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
     
     CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-//    [toolsManager wrapView:self.toolsViewController.view];
+    //    [toolsManager wrapView:self.toolsViewController.view];
     [client addContextManager:toolsManager];
     
     // Connect to daemon
@@ -83,7 +78,7 @@
 
 - (void)client:(CBAppClient *)client didReceiveEvent:(CBEvent *)event
 {
-//    daemon sending wrong values
+    //    daemon sending wrong values
     NSLog(@"got event: %lu %lu", event.contextID, event.elementID);
     if (event.contextID == 1 && event.elementID == 3) {
         NSArray *points = [event.content objectForKey:@"points"];
