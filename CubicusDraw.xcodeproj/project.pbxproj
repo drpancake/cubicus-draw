@@ -44,6 +44,8 @@
 		1A41CA1614FAA4EC009D5328 /* CBAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A41CA1514FAA4EC009D5328 /* CBAppClient.m */; };
 		1A42C751153B4F1000F3F6F2 /* CDDrawingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */; };
 		1A42C752153B4F1000F3F6F2 /* CDDrawingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */; };
+		1A42C756153B56F400F3F6F2 /* CDToolsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A42C754153B56F400F3F6F2 /* CDToolsController.m */; };
+		1A42C757153B56F400F3F6F2 /* CDToolsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A42C755153B56F400F3F6F2 /* CDToolsController.xib */; };
 		1A752E2C14FC2A1C00496E6E /* CBContextWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */; };
 		1AAC4242151556DE00402343 /* NativeBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA21501513EA9200A8825C /* NativeBridge.js */; };
 		1AD51C9D15055AA8009702EE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD51C9C15055AA8009702EE /* WebKit.framework */; };
@@ -131,6 +133,9 @@
 		1A42C74E153B4F1000F3F6F2 /* CDDrawingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingController.h; sourceTree = "<group>"; };
 		1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingController.m; sourceTree = "<group>"; };
 		1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingController.xib; sourceTree = "<group>"; };
+		1A42C753153B56F400F3F6F2 /* CDToolsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDToolsController.h; sourceTree = "<group>"; };
+		1A42C754153B56F400F3F6F2 /* CDToolsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDToolsController.m; sourceTree = "<group>"; };
+		1A42C755153B56F400F3F6F2 /* CDToolsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDToolsController.xib; sourceTree = "<group>"; };
 		1A752E2A14FC2A1C00496E6E /* CBContextWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBContextWrapView.h; path = mac/CBContextWrapView.h; sourceTree = "<group>"; };
 		1A752E2B14FC2A1C00496E6E /* CBContextWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBContextWrapView.m; path = mac/CBContextWrapView.m; sourceTree = "<group>"; };
 		1AD51C921503AB6F009702EE /* CBShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBShared.h; sourceTree = "<group>"; };
@@ -205,12 +210,15 @@
 			children = (
 				1A41CA0814FA9C71009D5328 /* CubicusDraw.h */,
 				1A41CA0914FA9C71009D5328 /* CubicusDraw.m */,
+				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
 				1A41C56414FA64A4009D5328 /* CDAppDelegate.h */,
 				1A41C56514FA64A4009D5328 /* CDAppDelegate.m */,
 				1A42C74E153B4F1000F3F6F2 /* CDDrawingController.h */,
 				1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */,
 				1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */,
-				1A41C56714FA64A4009D5328 /* MainMenu.xib */,
+				1A42C753153B56F400F3F6F2 /* CDToolsController.h */,
+				1A42C754153B56F400F3F6F2 /* CDToolsController.m */,
+				1A42C755153B56F400F3F6F2 /* CDToolsController.xib */,
 				1A41C55914FA64A4009D5328 /* Supporting Files */,
 			);
 			path = CubicusDraw;
@@ -414,6 +422,7 @@
 				1A41C56914FA64A4009D5328 /* MainMenu.xib in Resources */,
 				1AFA224C150E382B00436493 /* canvas.html in Resources */,
 				1A42C752153B4F1000F3F6F2 /* CDDrawingController.xib in Resources */,
+				1A42C757153B56F400F3F6F2 /* CDToolsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +468,7 @@
 				1AFB07B3150571AD00B3BD22 /* JPCanvasViewController.m in Sources */,
 				1ADA214415127B6300A8825C /* CBEvent.m in Sources */,
 				1A42C751153B4F1000F3F6F2 /* CDDrawingController.m in Sources */,
+				1A42C756153B56F400F3F6F2 /* CDToolsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

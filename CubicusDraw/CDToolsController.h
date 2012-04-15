@@ -7,7 +7,15 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CBShared.h"
 
 @interface CDToolsController : NSWindowController
+
+- (id)initWithClient:(CBAppClient *)client;
+
+// Load context managers
+- (void)loadCubicusContexts;
+
+@property (nonatomic, strong, readonly) CBAppClient *client;
 
 @end

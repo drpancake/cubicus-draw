@@ -8,17 +8,15 @@
 
 #import "CDToolsController.h"
 
-@interface CDToolsController ()
-
-@end
-
 @implementation CDToolsController
 
-- (id)initWithWindow:(NSWindow *)window
+@synthesize client;
+
+- (id)initWithClient:(CBAppClient *)theClient
 {
-    self = [super initWithWindow:window];
+    self = [super initWithWindowNibName:NSStringFromClass([self class])];
     if (self) {
-        // Initialization code here.
+        client = theClient;
     }
     
     return self;
@@ -27,8 +25,24 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [self loadCubicusContexts];
+}
+
+- (void)loadCubicusContexts
+{    
+    NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button 1\", \"ratio\": 0.33}";
+    NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"label\": \"Button 2\", \"ratio\": 0.33}";
+    NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"label\": \"Button 3\", \"ratio\": 0.33}";
+    NSString *hboxString = [NSString stringWithFormat:
+                  @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@, %@]}",
+                  button1, button2, button3];
+    SBJsonParser *parser = [[SBJsonParser alloc] init];
+    CBLayout *toolsLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
+    CBContext *context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
+    //    [toolsManager wrapView:self.toolsViewController.view];
+    [client addContextManager:toolsManager];
 }
 
 @end

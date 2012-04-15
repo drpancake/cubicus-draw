@@ -8,10 +8,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+#import "CBShared.h"
 #import "CDDrawingController.h"
+#import "CDToolsController.h"
 
-@interface CDAppDelegate : NSObject <NSApplicationDelegate>
+@interface CDAppDelegate : NSObject <NSApplicationDelegate, CBAppClientDelegate>
 
 @property (nonatomic, strong) CDDrawingController *drawingController;
+@property (nonatomic, strong) CDToolsController *toolsController;
+@property (nonatomic, strong) CBAppClient *client;
 
 @end

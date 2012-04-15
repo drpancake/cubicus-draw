@@ -14,16 +14,12 @@
 @synthesize client;
 @synthesize canvasViewController;
 
-- (id)initWithWindow:(NSWindow *)window
+- (id)initWithClient:(CBAppClient *)theClient
 {
-    self = [super initWithWindow:window];
+    self = [super initWithWindowNibName:NSStringFromClass([self class])];
     if (self) {
-        // Create a client but don't connect yet
-        CBHost *host = [[CBHost alloc] initWithAddress:CD_DAEMON_HOST port:[NSNumber numberWithInt:CD_DAEMON_PORT]];
-        client = [[CBAppClient alloc] initWithHost:host applicationName:CD_APP_NAME];
-        client.delegate = self;
+        client = theClient;
     }
-    
     return self;
 }
 
@@ -53,34 +49,16 @@
     CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
     //    [canvasManager wrapView:self.view];
     [client addContextManager:canvasManager defaultContext:YES];
-    
-    // Tools context manager
-    
-    NSString *button1 = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button 1\", \"ratio\": 0.33}";
-    NSString *button2 = @"{\"id\": 3, \"type\": \"button\", \"label\": \"Button 2\", \"ratio\": 0.33}";
-    NSString *button3 = @"{\"id\": 4, \"type\": \"button\", \"label\": \"Button 3\", \"ratio\": 0.33}";
-    hboxString = [NSString stringWithFormat:
-                  @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@, %@]}",
-                  button1, button2, button3];
-    CBLayout *toolsLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
-    context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
-    
-    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-    //    [toolsManager wrapView:self.toolsViewController.view];
-    [client addContextManager:toolsManager];
-    
-    // Connect to daemon
-    [client connect];
 }
 
 #pragma mark -
-#pragma mark CBAppClientDelegate
+#pragma mark CBEventReceiver
 
-- (void)client:(CBAppClient *)client didReceiveEvent:(CBEvent *)event
+- (void)sender:(id)sender didFireEvent:(CBEvent *)event
 {
-    //    daemon sending wrong values
-    NSLog(@"got event: %lu %lu", event.contextID, event.elementID);
+    NSLog(@"drawing controller got event: %lu %lu", event.contextID, event.elementID);
     if (event.contextID == 1 && event.elementID == 3) {
+        // Event is intended for canvas
         NSArray *points = [event.content objectForKey:@"points"];
         [self.canvasViewController drawPoints:points];
     }
