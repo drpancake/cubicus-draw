@@ -40,9 +40,9 @@
     CBLayout *toolsLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:2 layout:toolsLayout];
     
-    CBContextManager *toolsManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-    //    [toolsManager wrapView:self.toolsViewController.view];
-    [client addContextManager:toolsManager];
+    CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
+//    [manager wrapView:self.window.contentView];
+    [client addContextManager:manager];
 }
 
 @end

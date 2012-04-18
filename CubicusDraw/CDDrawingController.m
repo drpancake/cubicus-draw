@@ -47,7 +47,7 @@
     CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
-    CBContextManager *manager = [[CBContextManager alloc] initWithContext:context client:self.client];
+    CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
     manager.delegate = self;
     //    [manager wrapView:self.view];
     [client addContextManager:manager defaultContext:YES];
