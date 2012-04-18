@@ -11,7 +11,7 @@
 #import "CBShared.h"
 #import "JPCanvasViewController.h"
 
-@interface CDDrawingController : NSWindowController <CBContextManagerDelegate, CBEventReceiver, JPCanvasViewControllerDelegate>
+@interface CDDrawingController : NSWindowController <CBContextManagerDelegate, JPCanvasViewControllerDelegate>
 
 - (id)initWithClient:(CBAppClient *)client;
 

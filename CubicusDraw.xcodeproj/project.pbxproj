@@ -129,7 +129,6 @@
 		1A41CA1314FA9F57009D5328 /* CBContextManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBContextManagerDelegate.h; path = mac/CBContextManagerDelegate.h; sourceTree = "<group>"; };
 		1A41CA1414FAA4EC009D5328 /* CBAppClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClient.h; path = mac/CBAppClient.h; sourceTree = "<group>"; };
 		1A41CA1514FAA4EC009D5328 /* CBAppClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBAppClient.m; path = mac/CBAppClient.m; sourceTree = "<group>"; };
-		1A41CA1714FAC65A009D5328 /* CBAppClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBAppClientDelegate.h; path = mac/CBAppClientDelegate.h; sourceTree = "<group>"; };
 		1A42C74E153B4F1000F3F6F2 /* CDDrawingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDDrawingController.h; sourceTree = "<group>"; };
 		1A42C74F153B4F1000F3F6F2 /* CDDrawingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDDrawingController.m; sourceTree = "<group>"; };
 		1A42C750153B4F1000F3F6F2 /* CDDrawingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDDrawingController.xib; sourceTree = "<group>"; };
@@ -341,7 +340,6 @@
 			children = (
 				1A41CA1414FAA4EC009D5328 /* CBAppClient.h */,
 				1A41CA1514FAA4EC009D5328 /* CBAppClient.m */,
-				1A41CA1714FAC65A009D5328 /* CBAppClientDelegate.h */,
 				1A41CA1014FA9EE6009D5328 /* CBContextManager.h */,
 				1A41CA1114FA9EE6009D5328 /* CBContextManager.m */,
 				1A41CA1314FA9F57009D5328 /* CBContextManagerDelegate.h */,

@@ -12,7 +12,7 @@
 #import "CDDrawingController.h"
 #import "CDToolsController.h"
 
-@interface CDAppDelegate : NSObject <NSApplicationDelegate, CBAppClientDelegate>
+@interface CDAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (nonatomic, strong) CDDrawingController *drawingController;
 @property (nonatomic, strong) CDToolsController *toolsController;

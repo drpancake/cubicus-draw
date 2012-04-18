@@ -29,6 +29,7 @@
     
     // Create canvas and use it as our window's view
     canvasViewController = [[JPCanvasViewController alloc] init];
+    canvasViewController.delegate = self;
     [self.window setContentView:canvasViewController.view];
 
     [self loadCubicusContexts];
@@ -46,22 +47,10 @@
     CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
     CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
     
-    CBContextManager *canvasManager = [[CBContextManager alloc] initWithContext:context client:self.client];
-    //    [canvasManager wrapView:self.view];
-    [client addContextManager:canvasManager defaultContext:YES];
-}
-
-#pragma mark -
-#pragma mark CBEventReceiver
-
-- (void)sender:(id)sender didFireEvent:(CBEvent *)event
-{
-    NSLog(@"drawing controller got event: %lu %lu", event.contextID, event.elementID);
-    if (event.contextID == 1 && event.elementID == 3) {
-        // Event is intended for canvas
-        NSArray *points = [event.content objectForKey:@"points"];
-        [self.canvasViewController drawPoints:points];
-    }
+    CBContextManager *manager = [[CBContextManager alloc] initWithContext:context client:self.client];
+    manager.delegate = self;
+    //    [manager wrapView:self.view];
+    [client addContextManager:manager defaultContext:YES];
 }
 
 #pragma mark -
@@ -74,6 +63,18 @@
     CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
     event.contextID = 1;
     [client sendEvent:event];
+}
+
+#pragma mark -
+#pragma mark CBContextManagerDelegate
+
+- (void)manager:(CBContextManager *)manager didReceiveEvent:(CBEvent *)event
+{
+    if (event.elementID == 3) {
+        // Event is intended for canvas
+        NSArray *points = [event.content objectForKey:@"points"];
+        [self.canvasViewController drawPoints:points];
+    }
 }
 
 @end

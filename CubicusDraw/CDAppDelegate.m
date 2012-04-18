@@ -20,29 +20,18 @@
     // Create a client but don't connect yet
     CBHost *host = [[CBHost alloc] initWithAddress:CD_DAEMON_HOST port:[NSNumber numberWithInt:CD_DAEMON_PORT]];
     self.client = [[CBAppClient alloc] initWithHost:host applicationName:CD_APP_NAME];
-    self.client.delegate = self;
+    
+    // NSPanel, so won't become key window
+    self.toolsController = [[CDToolsController alloc] initWithClient:self.client];
+    [self.toolsController showWindow:nil];
     
     // Usually MainMenu NIB does this bit magically
     self.drawingController = [[CDDrawingController alloc] initWithClient:self.client];
     [self.drawingController showWindow:nil];
-
-    self.toolsController = [[CDToolsController alloc] initWithClient:self.client];
-    [self.toolsController showWindow:nil]; // NSPanel, so won't become key window
     
-    // By this point controllers have provided client with a
-    // set of CBContextManager objects ready to connect to daemon
+    // By this point controllers have provided client with a set of
+    // CBContextManager objects ready to send to daemon on connecting
     [self.client connect];
-}
-
-#pragma mark -
-#pragma mark CBAppClientDelegate
-
-- (void)client:(CBAppClient *)client didReceiveEvent:(CBEvent *)event
-{
-    NSLog(@"App delegate got event: %@", event);
-    
-    // For now forward to drawing controller
-    [self.drawingController sender:self didFireEvent:event];
 }
 
 @end
