@@ -31,8 +31,19 @@
     canvasViewController = [[JPCanvasViewController alloc] init];
     canvasViewController.delegate = self;
     [self.window setContentView:canvasViewController.view];
-
+    
+    // Cubicus
     [self createCubicusContext];
+    
+    // Set canvas color according to notifications from tools window
+    [[NSNotificationCenter defaultCenter] addObserverForName:CD_COLOR_NOTIFICATION
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:
+     ^(NSNotification *note) {
+         NSString *color = [note.userInfo objectForKey:@"color"];
+         self.canvasViewController.strokeColor = color;
+    }];
 }
 
 - (void)createCubicusContext

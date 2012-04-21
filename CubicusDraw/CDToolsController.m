@@ -110,7 +110,20 @@
         NSButton *buttonView = [self.window.contentView viewWithTag:button.elementID];
         [buttonView highlight:button.selected];
         buttonView.state = button.selected ? NSOnState : NSOffState;
-        NSLog(@"sync: %i", button.selected);
+        
+        // For the color selected, fire a notification so drawing window knows the current color
+        if (button.selected) {
+            // Decide on RGBA colour string
+            NSString *color;
+            if (button.elementID == CDToolsControllerButtonRed) {
+                color = @"rgba(255, 0, 0, 0.1)";
+            } else if (button.elementID == CDToolsControllerButtonBlue) {
+                color = @"rgba(0, 0, 255, 0.1)";
+            }
+            
+            NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:color, @"color", nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:CD_COLOR_NOTIFICATION object:self userInfo:info];
+        }
     }
 }
 

@@ -17,6 +17,11 @@ enum {
     CDToolsControllerButtonBlue = 2
 } CDToolsControllerButton;
 
+/*
+  NOTE: fires global notifications (see: CD_COLOR_NOTIFICATION) as colors
+  are selected
+*/
+
 @interface CDToolsController : NSWindowController <CBContextManagerDelegate> {
 @private
     // Models for the Cubicus representation of context's buttons

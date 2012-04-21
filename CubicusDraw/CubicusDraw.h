@@ -12,3 +12,5 @@ extern int const CD_DAEMON_PORT;
 
 extern int const CD_DRAWING_CONTEXT;
 extern int const CD_TOOLS_CONTEXT;
+
+extern NSString *const CD_COLOR_NOTIFICATION;

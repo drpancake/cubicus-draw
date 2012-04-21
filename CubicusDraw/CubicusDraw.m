@@ -14,3 +14,5 @@ int const CD_DAEMON_PORT = 28739;
 
 int const CD_DRAWING_CONTEXT = 1;
 int const CD_TOOLS_CONTEXT = 2;
+
+NSString *const CD_COLOR_NOTIFICATION = @"CDColorNotification";
