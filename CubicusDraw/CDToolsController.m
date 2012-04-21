@@ -12,13 +12,13 @@
 @implementation CDToolsController
 
 @synthesize client;
-@synthesize selectedColor;
 
 - (id)initWithClient:(CBAppClient *)theClient
 {
     self = [super initWithWindowNibName:NSStringFromClass([self class])];
     if (self) {
         client = theClient;
+        _cubicusButtons = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -27,27 +27,41 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
-    [self loadCubicusContexts];
-    
-    // Blue by default
-    self.selectedColor = CDToolsControllerBlue;
+    [self createCubicusContext];
 }
 
-- (void)loadCubicusContexts
-{    
-    NSString *red = [NSString stringWithFormat:
-                     @"{\"id\": %i, \"type\": \"button\", \"label\": \"Red\", \"ratio\": 0.5, \"selected\": true, \"group\": 1}", CDToolsControllerRed];
-    NSString *blue = [NSString stringWithFormat:
-                     @"{\"id\": %i, \"type\": \"button\", \"label\": \"Blue\", \"ratio\": 0.5, \"group\": 1}", CDToolsControllerBlue];
+- (void)createCubicusContext
+{
+    // Create color buttons
+    CBButton *button;
     
-    NSString *hbox = [NSString stringWithFormat:
-                      @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@]}",
-                      red, blue];
+    button = [[CBButton alloc] init];
+    button.elementID = CDToolsControllerButtonRed;
+    button.ratio = 0.5;
+    button.label = @"Red";
+    button.group = 1;
+    button.selected = YES;
+    [_cubicusButtons addObject:button];
     
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    CBLayout *layout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hbox]];
+    button = [[CBButton alloc] init];
+    button.elementID = CDToolsControllerButtonBlue;
+    button.ratio = 0.5;
+    button.label = @"Blue";
+    button.group = 1;
+    button.selected = NO;
+    [_cubicusButtons addObject:button];
+    
+    // Lay them out horizontally
+    CBHorizontalBox *box = [[CBHorizontalBox alloc] init];
+    box.elementID = 3;
+    box.ratio = 1;
+    box.items = [NSArray arrayWithArray:_cubicusButtons];
+    
+    // Context model
+    CBLayout *layout = [[CBLayout alloc] initWithRoot:box];
     CBContext *context = [[CBContext alloc] initWithID:CD_TOOLS_CONTEXT layout:layout];
     
+    // Create context manager and register it
     CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
     manager.delegate = self;
 //    [manager wrapView:self.window.contentView];
@@ -63,9 +77,9 @@
     NSButton *button = (NSButton *)sender;
     NSUInteger elementID;
     if ([button.title isEqualToString:@"Red"]) {
-        elementID = CDToolsControllerRed;
+        elementID = CDToolsControllerButtonRed;
     } else if ([button.title isEqualToString:@"Blue"]) {
-        elementID = CDToolsControllerBlue;
+        elementID = CDToolsControllerButtonBlue;
     }
     
     BOOL selected = (button.state == NSOnState);
@@ -84,9 +98,9 @@
 
 - (void)manager:(CBContextManager *)manager didReceiveEvent:(CBEvent *)event
 {   
-    if (event.elementID == CDToolsControllerRed) {
+    if (event.elementID == CDToolsControllerButtonRed) {
         NSLog(@"got event for red button");
-    } else if (event.elementID == CDToolsControllerBlue) {
+    } else if (event.elementID == CDToolsControllerButtonBlue) {
         NSLog(@"got event for blue button");
     }
 }

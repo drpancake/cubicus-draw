@@ -10,20 +10,23 @@
 #import "CBShared.h"
 
 enum {
-    CDToolsControllerRed,
-    CDToolsControllerBlue
-} CBToolsControllerElement;
+    CDToolsControllerButtonRed,
+    CDToolsControllerButtonBlue
+} CDToolsControllerButton;
 
-@interface CDToolsController : NSWindowController <CBContextManagerDelegate>
+@interface CDToolsController : NSWindowController <CBContextManagerDelegate> {
+@private
+    // Models for the Cubicus representation of context's buttons
+    NSMutableArray *_cubicusButtons;
+}
 
 - (id)initWithClient:(CBAppClient *)client;
 
-// Load context managers
-- (void)loadCubicusContexts;
+// Create context manager
+- (void)createCubicusContext;
 
 - (IBAction)didClickColor:(id)sender;
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
-@property (nonatomic, readwrite) int selectedColor;
 
 @end
