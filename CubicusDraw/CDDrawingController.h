@@ -15,8 +15,8 @@
 
 - (id)initWithClient:(CBAppClient *)client;
 
-// Load context managers
-- (void)loadCubicusContexts;
+// Create context manager
+- (void)createCubicusContext;
 
 @property (nonatomic, strong, readonly) CBAppClient *client;
 @property (nonatomic, strong, readonly) JPCanvasViewController *canvasViewController;

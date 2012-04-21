@@ -32,10 +32,10 @@
     canvasViewController.delegate = self;
     [self.window setContentView:canvasViewController.view];
 
-    [self loadCubicusContexts];
+    [self createCubicusContext];
 }
 
-- (void)loadCubicusContexts
+- (void)createCubicusContext
 {
     NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button\", \"ratio\": 0.3}";
     NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
