@@ -7,5 +7,8 @@
 //
 
 extern NSString *const CD_DAEMON_HOST;
-extern int const CD_DAEMON_PORT;
 extern NSString *const CD_APP_NAME;
+extern int const CD_DAEMON_PORT;
+
+extern int const CD_DRAWING_CONTEXT;
+extern int const CD_TOOLS_CONTEXT;

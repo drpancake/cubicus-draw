@@ -45,7 +45,7 @@
     
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
-    CBContext *context = [[CBContext alloc] initWithID:1 layout:canvasLayout];
+    CBContext *context = [[CBContext alloc] initWithID:CD_DRAWING_CONTEXT layout:canvasLayout];
     
     CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
     manager.delegate = self;
@@ -61,7 +61,7 @@
     // Points hard-coded for now
     NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:points, @"points", nil];
     CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
-    event.contextID = 1;
+    event.contextID = CD_DRAWING_CONTEXT;
     [client sendEvent:event];
 }
 

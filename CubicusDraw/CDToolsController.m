@@ -7,6 +7,7 @@
 //
 
 #import "CDToolsController.h"
+#import "CubicusDraw.h"
 
 @implementation CDToolsController
 
@@ -45,7 +46,7 @@
     
     SBJsonParser *parser = [[SBJsonParser alloc] init];
     CBLayout *layout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hbox]];
-    CBContext *context = [[CBContext alloc] initWithID:2 layout:layout];
+    CBContext *context = [[CBContext alloc] initWithID:CD_TOOLS_CONTEXT layout:layout];
     
     CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
     manager.delegate = self;
@@ -71,7 +72,7 @@
     NSDictionary *content = [[NSDictionary alloc] initWithObjectsAndKeys:
                              [NSNumber numberWithBool:selected], @"selected", nil];
     CBEvent *event = [[CBEvent alloc] initWithID:elementID content:content];
-    event.contextID = 2;
+    event.contextID = CD_TOOLS_CONTEXT;
     [self.client sendEvent:event];
     
 //    [button highlight:YES];
