@@ -51,7 +51,15 @@
     button.selected = NO;
     [_cubicusButtons addObject:button];
     
-    // Lay them out horizontally
+    // KVO to observe selection state for all buttons
+    for (CBButton *b in _cubicusButtons) {
+        [b addObserver:self
+            forKeyPath:@"selected"
+               options:NSKeyValueObservingOptionNew
+               context:NULL];
+    }
+    
+    // Lay out buttons horizontally
     CBHorizontalBox *box = [[CBHorizontalBox alloc] init];
     box.elementID = 3;
     box.ratio = 1;
@@ -66,31 +74,62 @@
     manager.delegate = self;
 //    [manager wrapView:self.window.contentView];
     [client addContextManager:manager];
+    
+    // Initial visual sync of NSButtons with models
+    [self syncWithModels];
+}
+
+#pragma mark -
+#pragma mark KVO
+
+- (void)dealloc
+{
+    // Tidy up KVO
+    for (CBButton *b in _cubicusButtons) {
+        [b removeObserver:self forKeyPath:@"selected"];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context
+{
+    if ([keyPath isEqualToString:@"selected"]) {
+        [self syncWithModels];
+    }
 }
 
 #pragma mark -
 #pragma mark Buttons
 
+- (void)syncWithModels
+{
+    for (CBButton *button in _cubicusButtons) {
+        // Fetch the corresponding NSButton view
+        NSButton *buttonView = [self.window.contentView viewWithTag:button.elementID];
+        [buttonView highlight:button.selected];
+        buttonView.state = button.selected ? NSOnState : NSOffState;
+        NSLog(@"sync: %i", button.selected);
+    }
+}
+
 - (IBAction)didClickColor:(id)sender {
-    NSLog(@"clicked color - b = %@", sender);
-    
-    NSButton *button = (NSButton *)sender;
-    NSUInteger elementID;
-    if ([button.title isEqualToString:@"Red"]) {
-        elementID = CDToolsControllerButtonRed;
-    } else if ([button.title isEqualToString:@"Blue"]) {
-        elementID = CDToolsControllerButtonBlue;
+    // Set the corresponding model's selected state to YES
+    // and all others to NO
+    NSButton *buttonView = (NSButton *)sender;
+    NSInteger elementID = buttonView.tag;
+    for (CBButton *button in _cubicusButtons) {
+        // TODO: this triggers needless calls to syncWithModels
+        button.selected = (button.elementID == elementID);
     }
     
-    BOOL selected = (button.state == NSOnState);
+    // Fire an event to daemon
     NSDictionary *content = [[NSDictionary alloc] initWithObjectsAndKeys:
-                             [NSNumber numberWithBool:selected], @"selected", nil];
+                             [NSNumber numberWithBool:YES], @"selected", nil];
     CBEvent *event = [[CBEvent alloc] initWithID:elementID content:content];
     event.contextID = CD_TOOLS_CONTEXT;
     [self.client sendEvent:event];
-    
-//    [button highlight:YES];
-    [button setState:NSOffState];
 }
 
 #pragma mark -
@@ -98,10 +137,29 @@
 
 - (void)manager:(CBContextManager *)manager didReceiveEvent:(CBEvent *)event
 {   
-    if (event.elementID == CDToolsControllerButtonRed) {
-        NSLog(@"got event for red button");
-    } else if (event.elementID == CDToolsControllerButtonBlue) {
-        NSLog(@"got event for blue button");
+    // Assume this is a 'selected' event
+    BOOL selected = [[event.content objectForKey:@"selected"] boolValue];
+    
+    // Work out button group for the recipient
+    NSUInteger group;
+    for (CBButton *button in _cubicusButtons) {
+        if (button.elementID == event.elementID) {
+            group = button.group;
+            if (group == -1) {
+                // Not in a group so just select/deselect and we're done
+                button.selected = selected;
+            }
+            break;
+        }
+    }
+    
+    if (group != -1) {
+        // Select the recipient, deselect all others in the group
+        for (CBButton *button in _cubicusButtons) {
+            if (button.group == group) {
+                button.selected = (button.elementID == event.elementID);
+            }
+        }
     }
 }
 

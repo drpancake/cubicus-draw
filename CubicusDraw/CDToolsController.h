@@ -9,9 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import "CBShared.h"
 
+/*
+  Must match TAG for NSButton items in IB
+*/
 enum {
-    CDToolsControllerButtonRed,
-    CDToolsControllerButtonBlue
+    CDToolsControllerButtonRed = 1,
+    CDToolsControllerButtonBlue = 2
 } CDToolsControllerButton;
 
 @interface CDToolsController : NSWindowController <CBContextManagerDelegate> {
@@ -21,6 +24,9 @@ enum {
 }
 
 - (id)initWithClient:(CBAppClient *)client;
+
+// Sync NSButton views with Cubicus models
+- (void)syncWithModels;
 
 // Create context manager
 - (void)createCubicusContext;
