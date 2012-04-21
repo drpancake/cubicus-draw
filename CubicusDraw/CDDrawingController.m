@@ -43,6 +43,12 @@
      ^(NSNotification *note) {
          NSString *color = [note.userInfo objectForKey:@"color"];
          self.canvasViewController.strokeColor = color;
+         
+         // Fire an event so remote client is aware of the new colour
+         NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:color, @"color", nil];
+         CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
+         event.contextID = CD_DRAWING_CONTEXT;
+         [self.client sendEvent:event];
     }];
 }
 
