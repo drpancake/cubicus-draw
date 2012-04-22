@@ -46,7 +46,7 @@
          
          // Fire an event so remote client is aware of the new colour
          NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:color, @"color", nil];
-         CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
+         CBEvent *event = [[CBEvent alloc] initWithID:1 content:content];
          event.contextID = CD_DRAWING_CONTEXT;
          [self.client sendEvent:event];
     }];
@@ -54,16 +54,22 @@
 
 - (void)createCubicusContext
 {
-    NSString *buttonString = @"{\"id\": 2, \"type\": \"button\", \"label\": \"Button\", \"ratio\": 0.3}";
-    NSString *canvasString = @"{\"id\": 3, \"type\": \"canvas\", \"ratio\": 0.7}";
-    NSString *hboxString = [NSString stringWithFormat:
-                            @"{\"id\": 1, \"type\": \"hbox\", \"ratio\": 1, \"items\": [%@, %@]}",
-                            buttonString, canvasString];
+    // Canvas
+    CBCanvas *canvas = [[CBCanvas alloc] init];
+    canvas.elementID = 1;
+    canvas.ratio = 1;
     
-    SBJsonParser *parser = [[SBJsonParser alloc] init];
-    CBLayout *canvasLayout = [CBLayout fromJSON:(NSDictionary *)[parser objectWithString:hboxString]];
-    CBContext *context = [[CBContext alloc] initWithID:CD_DRAWING_CONTEXT layout:canvasLayout];
+    // Container
+    CBHorizontalBox *box = [[CBHorizontalBox alloc] init];
+    box.elementID = 2;
+    box.ratio = 1;
+    box.items = [NSArray arrayWithObject:canvas];
     
+    // Context model
+    CBLayout *layout = [[CBLayout alloc] initWithRoot:box];
+    CBContext *context = [[CBContext alloc] initWithID:CD_DRAWING_CONTEXT layout:layout];
+    
+    // Create context manager and register it
     CBContextManager *manager = [[CBContextManager alloc] initWithContext:context];
     manager.delegate = self;
     //    [manager wrapView:self.view];
@@ -77,7 +83,7 @@
 {
     // Points hard-coded for now
     NSDictionary *content = [NSDictionary dictionaryWithObjectsAndKeys:points, @"points", nil];
-    CBEvent *event = [[CBEvent alloc] initWithID:3 content:content];
+    CBEvent *event = [[CBEvent alloc] initWithID:1 content:content];
     event.contextID = CD_DRAWING_CONTEXT;
     [client sendEvent:event];
 }
@@ -87,7 +93,7 @@
 
 - (void)manager:(CBContextManager *)manager didReceiveEvent:(CBEvent *)event
 {
-    if (event.elementID == 3) {
+    if (event.elementID == 1) {
         // Event is intended for canvas
         NSArray *points = [event.content objectForKey:@"points"];
         [self.canvasViewController drawPoints:points];
