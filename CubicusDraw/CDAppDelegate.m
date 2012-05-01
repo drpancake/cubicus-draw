@@ -34,4 +34,10 @@
     [self.client connect];
 }
 
+- (void)applicationDidBecomeActive:(NSNotification *)notification
+{
+    if (self.client.connected)
+        [self.client sendBecameActive];
+}
+
 @end
