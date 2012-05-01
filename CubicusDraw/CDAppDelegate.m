@@ -24,10 +24,13 @@
     // NSPanel, so won't become key window
     self.toolsController = [[CDToolsController alloc] initWithClient:self.client];
     [self.toolsController showWindow:nil];
+    [self.toolsController.window setFrameTopLeftPoint:NSMakePoint(50, 700)];
     
     // Usually MainMenu NIB does this bit magically
     self.drawingController = [[CDDrawingController alloc] initWithClient:self.client];
     [self.drawingController showWindow:nil];
+    [self.drawingController.window setContentSize:NSMakeSize(800, 600)];
+    [self.drawingController.window setFrameTopLeftPoint:NSMakePoint(200, 700)];
     
     // By this point controllers have provided client with a set of
     // CBContextManager objects ready to send to daemon on connecting
